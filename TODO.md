@@ -1,13 +1,20 @@
-## Implement wave [reconcillation api]('https://docs.wave.com/balance-api#balance-amp-reconciliation-api')
+## Implémenter l'[API de réconciliation](https://docs.wave.com/balance-api#balance-amp-reconciliation-api) de Wave
 
-- implement balance endpoint 
-    - [ ] Setup API call using Saloon for balance endpoint
-    - [ ] Add `include_subaccounts` as a query parameter
+- implémenter l'endpoint balance
+    - [x] Mettre en place l'appel API avec Saloon pour l'endpoint balance
+    - [x] Ajouter `include_subaccounts` comme paramètre de requête
 
-- implement transaction list endpoint 
-    - seetup api call using saloon 
-    - add query parameters date, after, include_subaccounts
-    - handle the pagination 
+- implémenter l'endpoint de liste des transactions
+    - [x] Mettre en place l'appel API avec Saloon
+    - [x] Ajouter les paramètres de requête date, after, include_subaccounts
+    - [x] Gérer la pagination (voir `paginateTransactions()`)
 
-- implement refund endpoint
-    - seetup api call using saloon (transaction_id) 
+- implémenter l'endpoint de remboursement
+    - [x] Mettre en place l'appel API avec Saloon (transaction_id)
+
+## Prochaines étapes
+
+- [ ] Webhooks : vérifier l'en-tête `Wave-Signature` des événements entrants
+- [x] Signature des requêtes (activer avec `WAVE_SIGNING_SECRET`)
+- [ ] Ajouter des tests pour les endpoints de l'API Merchant
+- [ ] Ajouter le support d'un autre fournisseur de paiement d'Afrique de l'Ouest
